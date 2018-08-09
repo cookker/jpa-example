@@ -1,0 +1,22 @@
+#logging.level:
+#  root: DEBUG
+logging.level:
+  net.sf.ehcache: debug
+
+spring:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    properties:
+      hibernate.generate_statistics: true
+      hibernate.format_sql: true
+    show-sql: true
+logging:
+  level:
+    org.hibernate.stat: debug
+    org.hibernate.type: debug
+spring.jpa.properties.hibernate.cache.use_second_level_cache: true
+spring.jpa.properties.hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+spring.jpa.properties.javax.persistence.sharedCache.mode: ENABLE_SELECTIVE
+
